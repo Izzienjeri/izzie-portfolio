@@ -1,64 +1,52 @@
-## Material UI Portfolio
+My Portfolio
+Description
+This is my personal portfolio website built using React, Material-UI, and EmailJS. It showcases my projects, experience, and provides a contact form for users to reach out to me.
 
-A portfolio single page application using React and Material UI
+Table of Contents
+Installation
+Usage
+Technologies Used
+Features
+Contact
+License
+Installation
+To install the dependencies and start the development server, follow these steps:
 
-### Demo of this site available here [Material-UI-Portfolio Demo](https://materialui-portfolio.netlify.app/)
+bash
+Copy code
+$ npm install
+$ npm start
+To build the project for production:
 
-#### Installing
+bash
+Copy code
+$ npm run build
+The server will be available at http://127.0.0.1:3000 in your browser.
 
-Clone the repository using following command or download
+Usage
+After starting the development server, you can navigate through the different sections of the portfolio. Here's a brief overview:
 
-```
-git clone https://github.com/devmahmud/material-ui-portfolio.git
-```
+About: Provides information about me and my background.
+Resume: Displays my resume for download.
+LinkedIn: Links to my LinkedIn profile.
+GitHub: Links to my GitHub profile.
+Experience: Details my work experience and projects.
+Contact Me: Contains a form for users to send me an email.
 
-#### To install dependency
+Technologies Used
+This project utilizes the following technologies:
 
-```
-npm install
-```
+React.js
+Material-UI
+EmailJS
 
-#### To start the server
+Features
+Responsive design using Material-UI components.
+Contact form powered by EmailJS for sending emails directly from the website.
+Easy navigation between different sections of the portfolio.
 
-```
-npm start
-```
+Contact
+Feel free to reach out to me through the contact form on my portfolio
 
-#### For Production Build
-
-```
-npm run build
-```
-
-Server will be available at http://127.0.0.1:3000 in your browser
-
-# Project snapshot
-
-## Home page
-
-![image](https://user-images.githubusercontent.com/19981097/86140838-218ec980-bb13-11ea-87c5-504d68c8d2a4.png)
-
-## Sidebar
-
-![image](https://user-images.githubusercontent.com/19981097/86140963-4aaf5a00-bb13-11ea-854e-012077dd6101.png)
-
-## Resume
-
-![image](https://user-images.githubusercontent.com/19981097/86141072-6fa3cd00-bb13-11ea-98d4-459d59af8a15.png)
-
-## Portfolio
-
-![image](https://user-images.githubusercontent.com/19981097/86141235-9f52d500-bb13-11ea-9d7b-44b982a6fd3f.png)
-
-## Contact
-
-![image](https://user-images.githubusercontent.com/19981097/86141330-bf829400-bb13-11ea-9070-ecd62027078f.png)
-
-## Author
-
-<blockquote>
-Elizabeth (Izzie) Njeri
-Email: izziedev254@gmail.com
-</blockquote>
-
-========Thank You !!!=========
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
