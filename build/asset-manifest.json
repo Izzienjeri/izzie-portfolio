@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/izzie-portfolio/static/css/main.28cb31f8.chunk.css",
+    "main.js": "/izzie-portfolio/static/js/main.c043f126.chunk.js",
+    "main.js.map": "/izzie-portfolio/static/js/main.c043f126.chunk.js.map",
+    "runtime-main.js": "/izzie-portfolio/static/js/runtime-main.598c044c.js",
+    "runtime-main.js.map": "/izzie-portfolio/static/js/runtime-main.598c044c.js.map",
+    "static/js/2.28a12e9d.chunk.js": "/izzie-portfolio/static/js/2.28a12e9d.chunk.js",
+    "static/js/2.28a12e9d.chunk.js.map": "/izzie-portfolio/static/js/2.28a12e9d.chunk.js.map",
+    "index.html": "/izzie-portfolio/index.html",
+    "precache-manifest.fcd48836da908df1ead04ed6e873ccc3.js": "/izzie-portfolio/precache-manifest.fcd48836da908df1ead04ed6e873ccc3.js",
+    "service-worker.js": "/izzie-portfolio/service-worker.js",
+    "static/css/main.28cb31f8.chunk.css.map": "/izzie-portfolio/static/css/main.28cb31f8.chunk.css.map",
+    "static/js/2.28a12e9d.chunk.js.LICENSE.txt": "/izzie-portfolio/static/js/2.28a12e9d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/izzie-portfolio/static/media/coffee-apple.149348ea.jpg",
+    "static/media/html-css-javascript-lg.jpg": "/izzie-portfolio/static/media/html-css-javascript-lg.54fd4234.jpg",
+    "static/media/html-css-javascript.jpg": "/izzie-portfolio/static/media/html-css-javascript.2c7701aa.jpg",
+    "static/media/javascript-fullstack.jpg": "/izzie-portfolio/static/media/javascript-fullstack.730958a2.jpg",
+    "static/media/mern-stack.jpg": "/izzie-portfolio/static/media/mern-stack.90616a5d.jpg",
+    "static/media/react-redux.jpg": "/izzie-portfolio/static/media/react-redux.a8b012a0.jpg",
+    "static/media/react.png": "/izzie-portfolio/static/media/react.f370c1e0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.598c044c.js",
+    "static/js/2.28a12e9d.chunk.js",
+    "static/css/main.28cb31f8.chunk.css",
+    "static/js/main.c043f126.chunk.js"
+  ]
+}
