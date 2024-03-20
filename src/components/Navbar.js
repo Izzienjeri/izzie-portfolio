@@ -54,8 +54,9 @@ const useStyles = makeStyles((theme) => ({
 
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
+  { listIcon: <Person />, listText: "About Me", listPath: "/about" }, 
+
   { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Person />, listText: "About Me", listPath: "/about" }, // Use the Person icon for "About Me"
   // { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
 ];
