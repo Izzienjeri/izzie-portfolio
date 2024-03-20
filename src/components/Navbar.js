@@ -17,6 +17,7 @@ import AssignmentInd from "@material-ui/icons/AssignmentInd";
 import Home from "@material-ui/icons/Home";
 import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
+import Person from "@material-ui/icons/Person"; // Import the Person icon
 import { makeStyles } from "@material-ui/core/styles";
 import Menu from "@material-ui/icons/Menu";
 
@@ -51,11 +52,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
   { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
+  { listIcon: <Person />, listText: "About Me", listPath: "/about" }, // Use the Person icon for "About Me"
+  // { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
 ];
 

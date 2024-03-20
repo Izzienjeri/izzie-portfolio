@@ -7,6 +7,9 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Send from "@material-ui/icons/Send";
 import emailjs from "emailjs-com";
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -64,69 +67,99 @@ const InputField = withStyles({
 const Contact = () => {
   const classes = useStyles();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const initialValues = {
+    name: '',
+    email: '',
+    message: '',
+  };
 
-    emailjs
-      .sendForm(
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    message: Yup.string().required('Message is required'),
+  });
+
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    try {
+      await emailjs.send(
         "service_rb23ccx", // Your EmailJS Service ID
         "template_ybmf1qd", // Your EmailJS Template ID
-        e.target,
-        "FjnoGd26TgnnRvYtg" // Your EmailJS Public Key (User ID)
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          // Reset form fields or show success message
+        {
+          name: values.name,
+          email: values.email,
+          message: values.message,
         },
-        (error) => {
-          console.log(error.text);
-          // Handle error (e.g., show error message)
-        }
+        "FjnoGd26TgnnRvYtg" // Your EmailJS Public Key (User ID)
       );
+      console.log("Email sent successfully!");
+      resetForm();
+      // Optionally, show a success message or redirect the user
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // Handle error (e.g., show error message)
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
-        <form className={classes.form} onSubmit={handleSubmit}>
-          <Typography variant="h5" className={classes.heading}>
-            Contact me...
-          </Typography>
-          <InputField
-            fullWidth={true}
-            label="Name"
-            variant="outlined"
-            inputProps={{ className: classes.input }}
-            name="name" // Add name attribute for form submission
-          />
-          <InputField
-            fullWidth={true}
-            label="Email"
-            variant="outlined"
-            inputProps={{ className: classes.input }}
-            className={classes.field}
-            name="email" // Add name attribute for form submission
-          />
-          <InputField
-            fullWidth={true}
-            label="Message"
-            variant="outlined"
-            multiline
-            rows={4}
-            inputProps={{ className: classes.input }}
-            name="message" 
-          />
-          <Button
-            type="submit"
-            variant="outlined"
-            fullWidth={true}
-            endIcon={<Send />}
-            className={classes.button}
-          >
-            Contact Me
-          </Button>
-        </form>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ isSubmitting }) => (
+            <Form className={classes.form}>
+              <Typography variant="h5" className={classes.heading}>
+                Contact me...
+              </Typography>
+              <Field
+                as={InputField}
+                fullWidth
+                label="Name"
+                variant="outlined"
+                inputProps={{ className: classes.input }}
+                name="name"
+                className={classes.field}
+              />
+              <ErrorMessage name="name" component="div" className={classes.error} />
+              <Field
+                as={InputField}
+                fullWidth
+                label="Email"
+                variant="outlined"
+                inputProps={{ className: classes.input }}
+                name="email"
+                className={classes.field}
+              />
+              <ErrorMessage name="email" component="div" className={classes.error} />
+              <Field
+                as={InputField}
+                fullWidth
+                label="Message"
+                variant="outlined"
+                multiline
+                rows={4}
+                inputProps={{ className: classes.input }}
+                name="message"
+                className={classes.field}
+              />
+              <ErrorMessage name="message" component="div" className={classes.error} />
+              <Button
+                type="submit"
+                variant="outlined"
+                fullWidth
+                endIcon={<Send />}
+                className={classes.button}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Submitting...' : 'Contact Me'}
+              </Button>
+            </Form>
+          )}
+        </Formik>
       </Grid>
     </Box>
   );

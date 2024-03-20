@@ -9,8 +9,8 @@ import avatar from "../avatar.png";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
-    width: theme.spacing(15),
-    height: theme.spacing(15),
+    width: theme.spacing(20),
+    height: theme.spacing(20),
     margin: theme.spacing(1),
   },
   title: {
@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt="Elizabeth (Izzie) Njeri" />
+        <Avatar className={classes.avatar} src={avatar} alt="Izzie" />
       </Grid>
  <Typography className={classes.title} variant="h4" style={{ color: 'white' }}>
       <Typed strings={["Elizabeth Njeri"]} typeSpeed={40} />
