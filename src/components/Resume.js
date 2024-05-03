@@ -130,7 +130,7 @@ const Resume = () => {
             className={classes.subHeading}
           >
             
-Supervisor and Customer Service Specialist
+Team Manager
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
             Teleperformance Greece, Remote
